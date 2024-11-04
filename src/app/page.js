@@ -1,101 +1,152 @@
-import Image from "next/image";
 
-export default function Home() {
+"use client";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const HomePage = () => {
+  const [jobs, setJobs] = useState([]);
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [company, setCompany] = useState('');
+  const [location, setLocation] = useState('');
+  const [jobId, setJobId] = useState(''); // State for the job ID input
+  const [singleJob, setSingleJob] = useState(null); // State for the fetched single job
+
+  // Fetch jobs from the API
+  const fetchJobs = async () => {
+    try {
+      const response = await axios.get('/api/jobs');
+      console.log('Fetched jobs:', response.data);
+      setJobs(response.data); // Set jobs directly from the response
+    } catch (error) {
+      console.error('Error fetching jobs:', error);
+    }
+  };
+
+  // Fetch a single job by ID
+  const fetchSingleJob = async () => {
+    if (!jobId) return; // Do not fetch if jobId is empty
+
+    try {
+      const response = await axios.get(`/api/jobs/${jobId}`);
+      setSingleJob(response.data); // Set the single job data
+    } catch (error) {
+      console.error('Error fetching job:', error);
+      setSingleJob(null); // Reset single job state if there's an error
+    }
+  };
+
+  // Handle form submission for adding new job
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const newJob = { title, description, company, location };
+
+    try {
+      const response = await axios.post('/api/jobs', newJob);
+      setJobs((prevJobs) => [response.data, ...prevJobs]); // Update state to include the new job
+      setTitle('');
+      setDescription('');
+      setCompany('');
+      setLocation('');
+    } catch (error) {
+      console.error('Error adding job:', error);
+    }
+  };
+
+  // Fetch jobs when the component mounts
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="max-w-4xl mx-auto p-4">
+      <h1 className="text-3xl font-bold text-center mb-6">Job Portal</h1>
+      
+      {/* Job Form */}
+      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h2 className="text-xl font-semibold mb-4">Add New Job</h2>
+        <input
+          type="text"
+          placeholder="Job Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <textarea
+          placeholder="Job Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+        <input
+          type="text"
+          placeholder="Company"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          required
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+        <input
+          type="text"
+          placeholder="Location"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+          required
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+        <button 
+          type="submit" 
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Add Job
+        </button>
+      </form>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Fetch Single Job by ID */}
+      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h2 className="text-xl font-semibold mb-4">Get Job by ID</h2>
+        <input
+          type="text"
+          placeholder="Enter Job ID"
+          value={jobId}
+          onChange={(e) => setJobId(e.target.value)}
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+        <button 
+          onClick={fetchSingleJob} 
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Get Job
+        </button>
+      </div>
+
+      {/* Display Single Job Details */}
+      {singleJob && (
+        <div className="bg-white shadow-md rounded-lg p-4 mb-4">
+          <h3 className="text-lg font-bold">{singleJob.title}</h3>
+          <p className="text-gray-700">{singleJob.description}</p>
+          <p className="text-gray-600">Company: {singleJob.company}</p>
+          <p className="text-gray-600">Location: {singleJob.location}</p>
+          <p className="text-gray-500 text-sm">Posted on: {new Date(singleJob.created_at).toLocaleDateString()}</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      )}
+
+      {/* Job List */}
+      <h2 className="text-xl font-semibold mb-4">Job Listings</h2>
+      <ul className="bg-white shadow-md rounded-lg divide-y divide-gray-200">
+        {jobs.map((job) => (
+          <li key={job.id} className="p-4">
+            <h3 className="text-lg font-bold">{job.title}</h3>
+            <p className="text-gray-700">{job.description}</p>
+            <p className="text-gray-600">Company: {job.company}</p>
+            <p className="text-gray-600">Location: {job.location}</p>
+            <p className="text-gray-500 text-sm">Posted on: {new Date(job.created_at).toLocaleDateString()}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
+
+export default HomePage;
