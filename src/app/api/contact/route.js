@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
     try {
         const body = await request.json();
-    
+  
         // Validate request body using Joi
         const { error, value } = contactSchema.validate(body, {
           abortEarly: false,
