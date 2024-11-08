@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hello-pangea/dnd": "^17.0.0",
     "@reduxjs/toolkit": "^2.3.0",
     "@tailwindcss/typography": "^0.5.15",
     "axios": "^1.7.7",
