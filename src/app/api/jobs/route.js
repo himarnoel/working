@@ -31,7 +31,7 @@ export async function GET() {
     const [rows] = await db.query(
       "SELECT * FROM jobs ORDER BY created_at DESC"
     );
-    console.log("rows", rows);
+    // console.log("rows", rows);
     return NextResponse.json(rows);
   } catch (error) {
     console.error("Error fetching jobs:", error);
