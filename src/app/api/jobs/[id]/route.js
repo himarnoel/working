@@ -11,7 +11,7 @@ export async function GET(request, { params }) {
       return NextResponse.json({ error: "Job not found" }, { status: 404 });
     }
 
-    return NextResponse.json(rows[0], { status: 200 }); // Return the first job found
+    return NextResponse.json({ job: rows[0] }, { status: 200 }); // Return the job found
   } catch (error) {
     console.error("Error fetching job:", error);
     return NextResponse.json(
@@ -21,15 +21,27 @@ export async function GET(request, { params }) {
   }
 }
 
+// PUT to update job content by ID
 export async function PUT(req, { params }) {
-  try {
-    const { content} = await req.json();
-    const jobId = params.id;
+  const { jobId } = params;
 
-    await db.query(
-      "UPDATE jobs SET content = ? WHERE id = ?",
-      [content, jobId]
-    );
+  try {
+    const { content } = await req.json();
+
+    // Check if the job exists
+    const [existingJob] = await db.query("SELECT * FROM jobs WHERE id = ?", [
+      jobId,
+    ]);
+    if (existingJob.length === 0) {
+      return NextResponse.json({ error: "Job not found" }, { status: 404 });
+    }
+
+    // Update job content
+    await db.query("UPDATE jobs SET content = ? WHERE id = ?", [
+      content,
+      jobId,
+    ]);
+
     return NextResponse.json({ message: "Job updated successfully" });
   } catch (error) {
     console.error("Error updating job:", error);
@@ -37,10 +49,20 @@ export async function PUT(req, { params }) {
   }
 }
 
+// DELETE job by ID
 export async function DELETE(req, { params }) {
-  try {
-    const jobId = params.id;
+  const { jobId } = params;
 
+  try {
+    // Check if the job exists
+    const [existingJob] = await db.query("SELECT * FROM jobs WHERE id = ?", [
+      jobId,
+    ]);
+    if (existingJob.length === 0) {
+      return NextResponse.json({ error: "Job not found" }, { status: 404 });
+    }
+
+    // Delete the job
     await db.query("DELETE FROM jobs WHERE id = ?", [jobId]);
 
     return NextResponse.json({ message: "Job deleted successfully" });
