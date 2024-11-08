@@ -1,20 +1,49 @@
 import { NextResponse } from "next/server";
 import { db } from "../../../../lib/db";
+import { jobSchema } from "@/utils/server/validationSchema";
 
-// Handle POST request - Add a new job
 export async function POST(req) {
   try {
-    const { content } = await req.json();
-    const [result] = await db.query("INSERT INTO jobs (content) VALUES (?)", [
-      content,
+    // Parse the request body
+    const body = await req.json();
+
+    // Validate the input data
+    const { error, value } = jobSchema.validate(body);
+    
+    if (error) {
+      console.log("Validation error:", error.details[0].message);
+      return NextResponse.json(
+        { message: error.details[0].message },
+        { status: 400 }
+      );
+    }
+
+    // Check for existing job with the same role to prevent duplicates
+    const [existingJob] = await db.query("SELECT * FROM jobs WHERE role = ?", [
+      value.role,
     ]);
+    if (existingJob.length > 0) {
+      return NextResponse.json(
+        { message: "A job with this role already exists" },
+        { status: 409 } // 409 Conflict status for duplicate entries
+      );
+    }
+
+    // Insert job data into the database
+    const [result] = await db.query("INSERT INTO jobs (role) VALUES (?)", [
+      value.role,
+    ]);
+
+    // Create the new job object with the insertId from the database
     const newJob = {
-      content,
+      id: result.insertId,
+      role: value.role,
       created_at: new Date(),
     };
+
     return NextResponse.json({
       message: "Job created successfully",
-      jobId: newJob,
+      job: newJob,
     });
   } catch (error) {
     console.error("Error creating job:", error);
