@@ -25,6 +25,16 @@ export const signupSchema = Joi.object({
   name: Joi.string().min(2).required(),
 });
 
+export const jobSchema = Joi.object({
+  role: Joi.string().required(),
+});
+
+export const jobContentSchema = Joi.object({
+  job_id:Joi.string().required(),
+  heading	: Joi.string().required(),
+  content:Joi.string().required(),
+});
+
 export const loginSchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().required(),
