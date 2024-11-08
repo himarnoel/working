@@ -54,14 +54,14 @@ export async function POST(request) {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       path: "/",
-      maxAge: 3600,
+      maxAge: 8 * 3600, 
       sameSite: "lax", // prevents CSRF issues
     });
 
     console.log("response", response);
     return response;
   } catch (error) {
-    console.log("error:", error.message);
+    console.log("error:", error);
 
     return NextResponse.json(
       { message: "Error logging in", error: error.message },
