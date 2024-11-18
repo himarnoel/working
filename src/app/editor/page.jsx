@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import axios from "axios";
 import "react-quill/dist/quill.snow.css"; // Import styles
+import QuillNoSSRWrapper from "@/components/QuillEditor";
 
 const QuillEditor = () => {
   const [editorHtml, setEditorHtml] = useState("");
@@ -47,7 +48,7 @@ const QuillEditor = () => {
 
   return (
     <div className="flex flex-col items-center p-5">
-      <ReactQuill
+      <QuillNoSSRWrapper 
         value={editorHtml}
         onChange={handleChange}
         placeholder="Write job description..."

@@ -30,7 +30,7 @@ const SideNav = () => {
     }
   };
   return (
-    <div className="w-[18%] flex flex-col   h-screen  border-r border-r-[#D0D3D9] px-6 overflow-y-auto">
+    <div className={`w-[18%]  flex-col hidden xl:flex   h-screen  border-r  border-r-[#D0D3D9] px-6 overflow-y-auto`}>
       <Image src={logo} className="mt-10  object-contain" />
 
       <div className="flex flex-col justify-between flex-1 mt-20">
