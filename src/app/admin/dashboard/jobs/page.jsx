@@ -1,9 +1,10 @@
 "use client";
-import ReactQuill from "react-quill";
+
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import React, { useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css"; // Import styles
 import Modal from "@/components/Modal";
+import QuillNoSSRWrapper from "@/components/QuillEditor";
 
 const Jobs = () => {
   // { heading: "", description: "" }
@@ -136,7 +137,7 @@ const Jobs = () => {
                           >
                             Description {index + 1}
                           </label>
-                          <ReactQuill
+                          <QuillNoSSRWrapper
                             value={item.description}
                             onChange={(html) => handleChange(html, index)}
                             placeholder="Write job description... "

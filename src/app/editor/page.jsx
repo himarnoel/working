@@ -1,7 +1,7 @@
 // components/QuillEditor.js
 "use client";
 import React, { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
+
 import axios from "axios";
 import "react-quill/dist/quill.snow.css"; // Import styles
 import QuillNoSSRWrapper from "@/components/QuillEditor";
