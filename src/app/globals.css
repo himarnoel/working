@@ -1,3 +1,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Instrument Sans Light */
+
+@font-face{
+    font-family: "InstrumentSansLight";
+    src: url("../../public/fonts/webfonts/InstrumentSans[wdth,wght].woff2");
+}
+
+.iLight{
+    font-family: InstrumentSansLight;
+}
+
+/* Instrument Sans Regular */
+
+@font-face{
+    font-family: "InstrumentSansRegular";
+    src: url("../../public/fonts/Instrument Sans Font/InstrumentSans-Regular-BF645daa1019d9e.ttf");
+}
+
+.iRegular{
+    font-family: InstrumentSansRegular;
+}
+
+/* Instrument Sans Medium */
+
+@font-face{
+    font-family: "InstrumentSansMedium";
+    src: url("../../public/fonts/Instrument Sans Font/InstrumentSans-Medium-BF645daa1006ca5.ttf");
+}
+
+.iMedium{
+    font-family: InstrumentSansMedium;
+}
+
+/* Instrument Sans Semi-Bold */
+
+@font-face{
+    font-family: "InstrumentSansSemiBold";
+    src: url("../../public/fonts/Instrument Sans Font/InstrumentSans-SemiBold-BF645daa0fdb37c.ttf");
+}
+
+.iSemiBold{
+    font-family: InstrumentSansSemiBold;
+}
+
+/* Instrument Sans Bold */
+
+@font-face{
+    font-family: "InstrumentSansBold";
+    src: url("../../public/fonts/Instrument Sans Font/InstrumentSans-Bold-BF645daa10224d2.ttf");
+}
+
+.iBold{
+    font-family: InstrumentSansBold;
+}
+
+
+.fade-in {
+    animation: fadeIn 0.3s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s backwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
