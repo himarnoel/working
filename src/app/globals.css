@@ -2,47 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    /* Instrument Sans Light */
-
-        @font-face{
-            font-family: "InstrumentSansLight";
-            src: url("../../public/fonts/webfonts/InstrumentSans[wdth,wght].woff2");
-        }
-
-
-        /* Instrument Sans Regular */
-
-        @font-face{
-            font-family: "InstrumentSans-Regular";
-            src: url("../../public/fonts/webfonts/InstrumentSans-Regular.woff2") format('woff2');
-        }
-
-
-        /* Instrument Sans Medium */
-
-        @font-face{
-            font-family: "InstrumentSans-Medium";
-            src: url("../../public/fonts/webfonts/InstrumentSans-Medium.woff2") format('woff2');
-        }
-
-
-        /* Instrument Sans Semi-Bold */
-
-        @font-face{
-            font-family: "InstrumentSans-SemiBold";
-            src: url("../../public/fonts/webfonts/InstrumentSans-SemiBold.woff2") format('woff2');
-        }
-
-
-        /* Instrument Sans Bold */
-
-        @font-face{
-            font-family: "InstrumentSans-Bold";
-            src: url("../../public/fonts/webfonts/InstrumentSans-Bold.woff2") format('woff2');
-        }
-}
-
 
 .fade-in {
     animation: fadeIn 0.3s forwards;
