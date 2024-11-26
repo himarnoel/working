@@ -26,15 +26,15 @@ const Footer = () => {
             
             <div className='flex flex-col lg:flex-row justify-between items-start lg:py-[42px] gap-[42px]'>
                 <div className='flex flex-col justify-start items-start gap-[32px] xl:w-[207px]'>
-                    <h1 className='text-green text-[1.375rem] font-semibold iSemiBold leading-[35.2px]'>Contact us</h1>
+                    <h1 className='text-green text-[1.375rem] font-semibold font-InstrumentSans-SemiBold leading-[35.2px]'>Contact us</h1>
                     <div className='flex flex-col justify-center items-start gap-[4px]'>
-                        <h2 className='text-grayTwo leading-[25.2px] text-[1.125rem] iBold'>Head - Office</h2>
+                        <h2 className='text-grayTwo leading-[25.2px] text-[1.125rem] font-InstrumentSans-Bold'>Head - Office</h2>
                         <p className='text-[1rem] leading-[28.8px] iLight text-grayTwo'>Elara Solutions GmbH</p>
                         <p className='text-[1rem] leading-[28.8px] iLight text-grayTwo'>Zeller Str. 3c</p>
                         <p className='text-[1rem] leading-[28.8px] iLight text-grayTwo'>97082 Würzburg</p>
                     </div>
                     <div className='flex flex-col justify-center items-start gap-[4px]'>
-                        <h2 className='text-grayTwo leading-[25.2px] text-[1.125rem] iBold'>Africa - Subsidiary</h2>
+                        <h2 className='text-grayTwo leading-[25.2px] text-[1.125rem] font-InstrumentSans-Bold'>Africa - Subsidiary</h2>
                         <p className='text-[1rem] leading-[28.8px] iLight text-grayTwo'>Elara Technical Services Ltd</p>
                         <p className='text-[1rem] leading-[28.8px] iLight text-grayTwo'>No. 1b Jide Sawyerr Drive</p>
                         <p className='text-[1rem] leading-[28.8px] iLight text-grayTwo'>Lekki Phase 1, Lagos, Nigeria</p>
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
                 <div className='w-full xl:w-[955.04px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-start justify-between gap-[36px] lg:gap-[90px] text-white'>
                     <div className='flex flex-col justify-center items-start gap-[24px] w-full'>
-                        <h1 className='text-green text-[1.375rem] font-semibold iSemiBold leading-[35.2px]'>Company</h1>
+                        <h1 className='text-green text-[1.375rem] font-semibold font-InstrumentSans-SemiBoldiBold leading-[35.2px]'>Company</h1>
                         <ul className='flex flex-col justify-center items-start gap-[16px]'>
                             <li className='iLight font-normal text-[1rem] leading-[28px] text-gray w-full'>Home</li>
                             <li className='iLight font-normal text-[1rem] leading-[28px] text-gray w-full'>About us</li>
@@ -60,7 +60,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className='flex flex-col justify-center items-start gap-[24px] w-full'>
-                        <h1 className='text-green text-[1.375rem] font-semibold iSemiBold leading-[35.2px]'>Services</h1>
+                        <h1 className='text-green text-[1.375rem] font-semibold font-InstrumentSans-SemiBoldiBold leading-[35.2px]'>Services</h1>
                         <ul className='flex flex-col justify-center items-start gap-[16px]'>
                             <li className='iLight font-normal text-[1rem] leading-[28px] text-gray w-full'>Application Development</li>
                             <li className='iLight font-normal text-[1rem] leading-[28px] text-gray w-full'>Cloud Development</li>
@@ -74,7 +74,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className='flex flex-col justify-center items-start gap-[24px] w-full'>
-                        <h1 className='text-green text-[1.375rem] font-semibold iSemiBold leading-[35.2px]'>Technologies</h1>
+                        <h1 className='text-green text-[1.375rem] font-semibold font-InstrumentSans-SemiBoldiBold leading-[35.2px]'>Technologies</h1>
                         <ul className='flex flex-col justify-center items-start gap-[16px]'>
                             <li className='iLight font-normal text-[1rem] leading-[28px] text-gray w-full'>Frontend Technologies</li>
                             <li className='iLight font-normal text-[1rem] leading-[28px] text-gray w-full'>Backend Technologies</li>
@@ -85,7 +85,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className='flex flex-col justify-center items-start gap-[24px] w-full'>
-                        <h1 className='text-green text-[1.375rem] font-semibold iSemiBold leading-[35.2px]'>Products</h1>
+                        <h1 className='text-green text-[1.375rem] font-semibold font-InstrumentSans-SemiBoldiBold leading-[35.2px]'>Products</h1>
                         <ul className='flex flex-col justify-center items-start gap-[16px]'>
                             <li className='iLight font-normal text-[1rem] leading-[28px] text-gray w-full'>Core Banking</li>
                             <li className='iLight font-normal text-[1rem] leading-[28px] text-gray w-full'>Retail Banking</li>

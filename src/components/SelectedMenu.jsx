@@ -13,7 +13,7 @@ const SelectedMenu = ({ selectedLink, setSelectedLink }) => {
         if (selectedLink) {
             setShouldRender(true);
         } else {
-            setTimeout(() => setShouldRender(false), 300); // Make sure to match the animation duration
+            setTimeout(() => setShouldRender(false), 300);
         }
     }, [selectedLink]);
 

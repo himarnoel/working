@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 const instrumentSans = Instrument_Sans({
-  subsets: ["latin"], // Add subsets if needed
-  weight: ["400", "700"], // Use specific weights if supported
-  style: ["normal", "italic"], // Optional: specify styles
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export default function RootLayout({ children }) {

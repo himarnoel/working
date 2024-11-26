@@ -3,7 +3,7 @@ import { IoArrowForwardOutline } from 'react-icons/io5'
 
 const ProductsMenu = () => {
   return (
-    <div className='p-[24px] flex flex-col justify-start items-start gap-[24px] w-full'>
+    <div className='p-[24px] flex flex-col justify-start items-start gap-[24px] w-full xl:w-[1202px] xl:h-[248px] xl:grid xl:grid-cols-4 xl:justify-items-center xl:place-items-center xl:gap-[40px]'>
         <div className='flex justify-between items-center w-full text-green font-medium iMedium leading-[28.8px] text-[1.125rem]'>
             <p>Core Banking</p>
             <IoArrowForwardOutline></IoArrowForwardOutline>

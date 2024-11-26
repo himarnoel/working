@@ -1,11 +1,14 @@
+'use client'
+
 import React, { useEffect, useState } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 import SelectedMenu from './SelectedMenu';
 
-const Menu = ({ menu, setMenu }) => {
-  const [shouldRender, setShouldRender] = useState(menu);
-  const [selectedLink, setSelectedLink] = useState('');
+const Menu = ({ menu, setMenu, selectedLink, setSelectedLink }) => {
 
+  const [shouldRender, setShouldRender] = useState(menu);
+
+  if (!shouldRender) return null;
   useEffect(() => {
     if (menu) {
       setShouldRender(true);
@@ -30,7 +33,7 @@ const Menu = ({ menu, setMenu }) => {
               key={index}
               className='group flex justify-between items-start relative w-full duration-200 text-blueTwo cursor-pointer hover:text-greenTwo leading-[16px] text-[1rem]'
             >
-              <p className='iMedium'>{link}</p>
+              <p className='font-InstrumentSans-Medium'>{link}</p>
               {['Products', 'Technologies', 'Services'].includes(link) && (
                 <IoIosArrowForward />
               )}
@@ -38,9 +41,15 @@ const Menu = ({ menu, setMenu }) => {
           )
         )}
       </div>
-      <button className='bg-blue text-white w-[328px] h-[56px] rounded-lg flex justify-center items-center py-[17px] gap-[34px] iLight text-[.875rem] leading-[14px]'>
-        Get in Touch
-      </button>
+      <div className="flex items-center justify-center h-screen">
+        <button className="relative group w-[328px] h-[56px] overflow-hidden rounded-lg flex xl:hidden justify-center items-center py-[17px] gap-[34px] bg-blue text-white text-[.875rem] leading-[30px] after:content-[''] after:absolute after:bg-greenTwo after:w-0 after:h-full after:top-0 after:left-0 after:transition-all after:duration-300 after:z-[1px] hover:after:w-full hover:after:left-0 transition-colors font-InstrumentSans-Regular"
+        >
+          <span className="z-10 relative transition-colors group-hover:text-blue">
+            Get in Touch
+          </span>
+        </button>
+      </div>
+
 
       {/* Only render SelectedMenu if selectedLink has a value */}
       {selectedLink === 'Technologies' || selectedLink === 'Services' || selectedLink === 'Products' ? (<SelectedMenu selectedLink={selectedLink} setSelectedLink={setSelectedLink} /> ): ''}
