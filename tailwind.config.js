@@ -12,11 +12,17 @@ module.exports = {
         black: '#000000',
         blue: '#161141',
         blueTwo: '#475569',
+        blueThree: '#667085',
         green: '#88E755',
         greenTwo: '#39A300',
         gray: '#F5F7F8',
-        grayTwo: '#E0E0E0'
-      }
+        grayTwo: '#E0E0E0',
+        grayThree: '#F7F7F7'
+      },
+      fontFamily: {
+        'instrument': ['"Instrument Sans"', "sans-serif"],
+        'bevan': ['"Bevan"', "sans-serif"],
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
