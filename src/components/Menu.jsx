@@ -25,7 +25,7 @@ const Menu = ({ menu, setMenu, selectedLink, setSelectedLink }) => {
     <aside
       className={`${
         menu ? 'fade-in' : 'fade-out'
-      } flex flex-col justify-start py-[100px] items-center xl:hidden fixed top-[9.1%] right-0 bg-white z-40 w-[375px] gap-[100px] h-screen p-3 shadow-[10px_0px_30px_rgba(0,0,0,0.1)]`}
+      } flex flex-col justify-start py-[100px] items-center xl:hidden fixed top-[100%] right-0 bg-white z-40 w-[375px] gap-[100px] h-screen p-3 shadow-[10px_0px_30px_rgba(0,0,0,0.1)]`}
     >
       <div className='flex flex-col justify-center relative items-start gap-[48px] w-[328px]'>
         {links.map(
