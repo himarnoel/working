@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
 import { GoArrowLeft } from "react-icons/go";
-import city from '../../../../public/assets/case-studies/city.svg';
+import city from '../../../../public/assets/case-studies/_Rich text img.svg';
 import Link from 'next/link';
 import { SlPaperPlane } from "react-icons/sl";
 import { cases } from '@/raw-data/data';
@@ -17,12 +17,12 @@ const page = () => {
                     <GoArrowLeft />
                     <p>Back to main casestudy page</p>
                 </Link>
-                <h1 className='text-blue leading-[52px] font-semibold font-instrument text-[2.5rem]'>Agency Banking: Revolutionising Financial Access Through a Network of Authorised Agents</h1>
+                <h1 className='text-blue leading-[31.2px] md:leading-[52px] font-semibold font-instrument text-[1.5rem] md:text-[2.5rem]'>Agency Banking: Revolutionising Financial Access Through a Network of Authorised Agents</h1>
                 <p className='text-greenTwo leading-[24px] text-[1.125rem] font-semibold font-instrument'>13 Jan 2022 • 10 min read</p>
             </div>
             <div className='max-w-[1140px] mx-auto flex flex-col md:flex-row justify-between items-start gap-[120px]'>
                 <div className='flex flex-col justify-center items-start gap-[48px] w-full xl:w-[640px]'>
-                    <Image width={640} height={426.67} className='object-cover rounded-2xl' src={city} alt='City Scape'></Image>
+                    <Image width={640} height={426.67} className='object-cover rounded-2xl w-[330px] sm:w-[640px] h-[220px] md:h-[426.67px]' src={city} alt='City Scape'></Image>
                     <div className='flex flex-col justify-center items-start gap-[24px]'>
                         <h1 className='text-greenTwo leading-[38px] font-semibold font-instrument text-[1.875rem]'>Project Overview:</h1>
                         <p className='font-normal leading-[28px] text-[1.125rem] text-blueTwo font-instrument'>
