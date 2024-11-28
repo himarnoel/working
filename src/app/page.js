@@ -3,6 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Footer from '@/components/Footer';
+import HomeHero from './home/HomeHero';
+import CompanySlider from './home/CompanySlider';
+import OurServices from './home/OurServices';
 
 const HomePage = () => {
   // const [jobs, setJobs] = useState([]);
@@ -62,7 +65,9 @@ const HomePage = () => {
   return (
 
       <main className='w-full bg-white min-h-screen'>
-        
+        <HomeHero/>
+        <CompanySlider/>
+        <OurServices/>
       </main>
 
 

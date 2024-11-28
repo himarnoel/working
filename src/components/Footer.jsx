@@ -9,7 +9,7 @@ import { FaInstagram, FaLinkedin } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <footer className='relative xl:min-h-[1250px] w-full bg-blue px-[24px] py-[100px] overflow-x-hidden'>
+    <footer className='relative min-h-screen overflow-y-hidden xl:min-h-[1250px] w-full bg-blue px-[24px] py-[100px] overflow-x-hidden'>
         <div className='max-w-[1280px] mx-auto flex flex-col gap-[64px] lg:gap-[90px]'>
             <div className='w-full flex justify-between items-center'>
                 <Link href={`/`}>
