@@ -12,6 +12,8 @@ import OurDevProcess from './home/OurDevProcess';
 import IndustriesWeServe from './home/IndustriesWeServe';
 import WhyElaraSolutions from './home/WhyElaraSolutions';
 import Testimonials from './home/Testimonials';
+import ContactUs from './home/ContactUs';
+import GetStarted from './home/GetStarted';
 
 const HomePage = () => {
   // const [jobs, setJobs] = useState([]);
@@ -80,6 +82,8 @@ const HomePage = () => {
         <IndustriesWeServe/>
         <WhyElaraSolutions/>
         <Testimonials/>
+        <ContactUs/>
+        <GetStarted/>
       </main>
 
 

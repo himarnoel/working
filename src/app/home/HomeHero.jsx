@@ -11,7 +11,7 @@ const HomeHero = () => {
             className="absolute top-0 left-0 w-screen h-full object-cover z-[5px]" 
         />
 
-        <div className='gap-[20px] max-w-[1079px] mx-auto px-[24px] md:px-[44px] relative z-10 mt-[170px] lg:mt-[190px] flex flex-col justify-center items-center'>
+        <div className='gap-[20px] w-full 2xl:max-w-[1079px] mx-auto px-[24px] md:px-[44px] relative z-10 mt-[170px] lg:mt-[190px] flex flex-col justify-center items-center'>
             <h1 className='w-[328px] md:w-full lg:w-[991px] flex justify-center items-center text-center gap-[24px] font-bold text-[2.25rem] md:text-[3.5rem] leading-[43.2px] md:leading-[67.2px] text-white'>
                 Building Digital Ecosystems: Empowering Global Growth and Innovation
             </h1>

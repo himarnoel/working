@@ -9,14 +9,13 @@ const OurServices = () => {
   return (
     <section className='bg-graySeven w-full min-h-screen py-[160px] gap-[48px] flex flex-col justify-center items-center'>
         <div className='flex flex-col justify-center items-center text-center gap-[24px] w-[328px] md:w-[812px] font-instrument'>
-            <h2 className='uppercase text-greenTwo font-semibold text-[1.125rem] md:text-[1rem] leading-[12px]'>our services</h2>
-            <h1 className='text-[1.5rem] md:text-[2rem] leading-[31.2px] md:leading-[41.6px] font-semibold text-blue'>Discover our solutions to empower your business to scale efficiently and operate seamlessly in a digital-first world.</h1>
+            <h2 className='uppercase text-greenTwo font-semibold text-[1.125rem] md:text-[1rem] leading-[15.6px] md:leading-[12px]'>our services</h2>
+            <h1 className='text-[1.25rem] md:text-[2rem] leading-[23.32px] md:leading-[41.6px] font-semibold text-blue'>Discover our solutions to empower your business to scale efficiently and operate seamlessly in a digital-first world.</h1>
         </div>
-        <div className='py-[21.4px] md:py-[40px] px-[23.54px] md:px-[44px] xl:min-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[12.84px] md:gap-[24px] justify-items-center place-items-center'>
+        <div className='py-[21.4px] md:py-[40px] px-[23.54px] md:px-[44px] xl:min-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[24px] justify-items-center place-items-center h-full'>
             {
                 services.map((service, index) => (
-
-                    <div key={index} className='relative w-[331.7px] md:w-full lg:w-[620px] h-[267.5px] md:h-full lg:h-[500px] rounded-[6.42px] md:rounded-[12px]'>
+                    <div key={index} className='relative w-[331.7px] md:w-full xl:w-[620px] h-[267.5px] md:h-[335px] lg:h-[400px] xl:h-[500px] rounded-[6.42px] md:rounded-[12px]'>
                         <Image src={service.img} className='absolute rounded-[6.42px] md:rounded-[12px]' alt={service.name}></Image>
                         <div className='relative z-10 py-[41.73px] md:py-[80px] px-[25.68px] md:px-[30px] flex flex-col justify-center items-center text-center gap-[2.14px] md:gap-[4px] w-full'>
                             <h2 className='uppercase text-green text-[0.535rem] md:text-[1rem] font-medium leading-[24px] font-instrument'>services</h2>
