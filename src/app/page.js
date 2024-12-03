@@ -6,6 +6,12 @@ import Footer from '@/components/Footer';
 import HomeHero from './home/HomeHero';
 import CompanySlider from './home/CompanySlider';
 import OurServices from './home/OurServices';
+import OurTechnologies from './home/OurTechnologies';
+import OurProducts from './home/OurProducts';
+import OurDevProcess from './home/OurDevProcess';
+import IndustriesWeServe from './home/IndustriesWeServe';
+import WhyElaraSolutions from './home/WhyElaraSolutions';
+import Testimonials from './home/Testimonials';
 
 const HomePage = () => {
   // const [jobs, setJobs] = useState([]);
@@ -64,10 +70,16 @@ const HomePage = () => {
 
   return (
 
-      <main className='w-full bg-white min-h-screen'>
+      <main className='w-full min-h-screen'>
         <HomeHero/>
         <CompanySlider/>
         <OurServices/>
+        <OurTechnologies/>
+        <OurProducts/>
+        <OurDevProcess/>
+        <IndustriesWeServe/>
+        <WhyElaraSolutions/>
+        <Testimonials/>
       </main>
 
 

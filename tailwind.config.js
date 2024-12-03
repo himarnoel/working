@@ -14,6 +14,8 @@ module.exports = {
         blueTwo: '#475569',
         blueThree: '#667085',
         blueFour: '#25262D',
+        blueFive: '#3F3873',
+        blueSix: '#1F1951',
         green: '#88E755',
         greenTwo: '#39A300',
         gray: '#F5F7F8',
@@ -22,7 +24,8 @@ module.exports = {
         grayFour: '#E0ECD9',
         grayFive: '#E9EAED',
         graySix: '#F0F0F0',
-        graySeven: '#EFEFEF'
+        graySeven: '#EFEFEF',
+        grayEight: '#141415'
       },
       fontFamily: {
         instrument: ['"Instrument Sans"', "sans-serif"],

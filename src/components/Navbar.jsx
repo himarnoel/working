@@ -14,7 +14,7 @@ const Navbar = () => {
   const [selectedLink, setSelectedLink] = useState('');
 
   return (
-    <nav className='bg-transparent z-50 absolute top-0 py-[20px] xl:py-[24px] px-[24px] xl:px-[100px] flex justify-between items-center h-[96px] w-full'>
+    <nav className='bg-white z-50 sticky top-0 py-[20px] xl:py-[24px] px-[24px] xl:px-[100px] flex justify-between items-center h-[96px] w-full'>
       <Link href={`/`}>
         <Image
           width={200.87}
