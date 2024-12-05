@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const HomeHero = () => {
@@ -18,7 +19,7 @@ const HomeHero = () => {
             <p className='w-[328px] md:w-full lg:w-[893px] flex justify-center items-center text-center text-grayThree text-[.875rem] md:text-[1.25rem] font-normal leading-[19.6px] md:leading-[35px] font-manrope'>
                 Your partner for cutting-edge IT solutions, tailored to drive transformation and profitability. From IT infrastructure to digital transformation, we help you stay ahead of the curve.
             </p>
-            <button className='bg-white py-[17px] md:py-[21px] flex justify-center items-center gap-[10px] w-[238px] h-[56px] rounded-full text-blue text-[.875rem] font-normal leading-[14px]'>Get in Touch</button>
+            <Link href={`/contact-us`} className='bg-white py-[17px] md:py-[21px] flex justify-center items-center gap-[10px] w-[238px] h-[56px] rounded-full text-blue text-[.875rem] font-normal leading-[14px]'>Get in Touch</Link>
             <p className='text-[1rem] leading-[35px] font-normal text-graySix font-dmSans'>Trusted by 100+ institutions worldwide</p>
         </div>
     </section>
