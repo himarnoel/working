@@ -6,12 +6,12 @@ import { IoMdArrowForward } from "react-icons/io";
 
 const OurTechnologiesGeneral = ({tech, techTitle}) => {
   return (
-    <section className='pt-[160px] pb-[120px] lg:py-[160px] lg:px-[54px] gap-[48px] lg:gap-[80px] flex flex-col justify-center items-center w-full bg-grayThree'>
+    <section className='pt-[160px] pb-[120px] lg:py-[160px] xl:px-[54px] gap-[48px] lg:gap-[80px] flex flex-col justify-center items-center w-full bg-grayThree'>
         <h1 className='w-[207px] lg:w-[370px] gap-[16px] flex justify-center items-center text-center text-blue font-bold leading-10 lg:leading-[67.2px] text-[2rem] lg:text-[3.5rem]'>{techTitle}</h1>
-        <div className='w-full lg:min-w-[1320px] mx-auto py-[150px] px-[76px] lg:rounded-[40px] bg-blue lg:h-[3300px] grid grid-cols-1 md:grid-cols-2 justify-items-center place-items-center gap-[40px] lg:gap-y-[40px] lg:gap-x-[24px]'>
+        <div className='w-full xl:min-w-[1320px] mx-auto py-[150px] px-[76px] xl:rounded-[40px] bg-blue h-full xl:h-[3300px] grid grid-cols-1 md:grid-cols-2 justify-items-center place-items-center gap-[40px] lg:gap-y-[40px] lg:gap-x-[24px]'>
             {
                 tech.map((t) => (
-                    <div key={t.id} className='border border-blueFive bg-blueSix gap-[24px] lg:gap-[16px] py-[40px] lg:py-[64px] px-[16px] lg:px-[24px] 2xl:px-[30px] rounded-[16px] w-[328px] md:w-full xl:w-[590px] 2xl:w-[608px] h-[759px] lg:h-[740px] flex flex-col justify-between items-start font-instrument'>
+                    <div key={t.id} className='border border-blueFive bg-blueSix gap-[24px] lg:gap-[16px] py-[40px] xl:py-[64px] px-[16px] xl:px-[24px] 2xl:px-[30px] rounded-[16px] w-[328px] md:w-full xl:w-[590px] 2xl:w-[608px] h-[759px] lg:h-full xl:h-[740px] flex flex-col justify-between items-start font-instrument'>
                         <div className='flex flex-col justify-start items-start gap-[16px] w-full'>
                             <div className='w-[176px] flex justify-start items-center gap-[16px]'>
                                 <div className='bg-grayEleven border border-blueFive gap-[10px] py-[12px] rounded-[10px] w-[64px] h-[64px] flex justify-center items-center'>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const OurServices = () => {
   return (
-    <section className='bg-white py-[120px] px-[100px]'>
+    <section className='bg-white py-[120px] px-[24px] xl:px-[100px]'>
         <div className='flex flex-col justify-center items-center gap-[96px] max-w-[1296px] mx-auto'>
             <h1 className='w-[755px] text-center text-blue font-bold text-[3.5rem] leading-[70px]'>Our Frontend Development Services</h1>
             <div className='w-full flex flex-col justify-center items-center gap-[56px]'>

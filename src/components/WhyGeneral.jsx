@@ -11,7 +11,7 @@ const WhyGeneral = ({header, img, whyContent}) => {
                 <div className='xl:h-[760px] w-[328px] md:w-[50%] xl:w-[640px] flex flex-col justify-between items-center gap-[10px]'>
                     {
                         whyContent.map((wc, index) => (
-                            <div key={index} className='bg-gray w-full min-h-[240px] lg:h-[235px] rounded-[16px] py-[24px] lg:py-[50px] px-[16px] lg:px-[24px] flex flex-col justify-start lg:justify-between items-start gap-[10px] lg:gap-[24px]'>
+                            <div key={index} className='bg-gray w-full min-h-[240px] lg:h-[235px] rounded-[16px] py-[24px] xl:py-[35px] px-[16px] lg:px-[24px] flex flex-col justify-start items-start gap-[10px] lg:gap-[24px]'>
                                 <h1 className='font-instrument text-blue font-semibold text-[1.25rem] xl:text-[1.75rem] leading-[26px] lg:leading-[34.16px]'>
                                     {wc.id}. {wc.heading}
                                 </h1>

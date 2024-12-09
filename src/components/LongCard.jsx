@@ -6,7 +6,7 @@ const LongCard = ({services}) => {
     <>
         {
             services.slice(0,1).map((service, index) => (
-                <div key={index} className='w-[340px] md:w-full xl:w-[1296px] h-[480px] lg:h-[640px] rounded-[16px] lg:rounded-[40px] bg-grayTen gap-10 flex flex-col md:flex-row justify-between items-center py-[36px] px-[50px]'>
+                <div key={index} className='w-[340px] md:w-full xl:w-full h-[480px] lg:h-[640px] rounded-[16px] lg:rounded-[40px] bg-grayTen gap-10 flex flex-col md:flex-row justify-between items-center py-[36px] px-[50px]'>
                     <div className='w-full md:w-[514px] gap-[16px] flex flex-col justify-center items-start'>
                         <h1 className='text-blue font-semibold leading-[31.2px] lg:leading-[41.6px] text-[1.5rem] lg:text-[2rem] font-instrument'>{service.name}</h1>
                         <p className='text-blueTwo font-normal text-[.875rem] lg:text-[1rem] leading-[19.6px] lg:leading-[28.8px]'>{service.desc}</p>
