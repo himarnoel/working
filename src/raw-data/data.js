@@ -90,7 +90,7 @@ export const links = [
     {
         id: 1,
         name: 'About us',
-        route: '/about'
+        route: '#'
     },
     {
         id: 2,
