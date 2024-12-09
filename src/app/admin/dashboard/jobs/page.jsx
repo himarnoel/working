@@ -2,13 +2,13 @@
 
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import React, { useEffect, useState } from "react";
-import "react-quill/dist/quill.snow.css"; // Import styles
+import "react-quill/dist/quill.snow.css";
 import Modal from "@/components/Modal";
 import QuillNoSSRWrapper from "@/components/QuillEditor";
 
 const Jobs = () => {
   // { heading: "", description: "" }
-  const [jobs, setJobs] = useState([]); // State to hold jobs
+  const [jobs, setJobs] = useState([]);
   const [moveButton, setMoveButton] = useState(false);
 
   const handleChange = (html, index) => {
