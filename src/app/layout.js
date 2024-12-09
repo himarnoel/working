@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Instrument_Sans, Bevan, DM_Sans, Manrope } from "next/font/google";
 import Footer from "@/components/Footer";
+import StoreProvider from "@/lib/StoreProvider";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -30,7 +31,9 @@ export default function RootLayout({ children }) {
         className={`${instrumentSans.className} ${bevan.className} ${dmSans.className} ${manrope.className}`}
       >
         <Navbar />
+        <StoreProvider>
         {children}
+        </StoreProvider>
         <Footer />
       </body>
     </html>
