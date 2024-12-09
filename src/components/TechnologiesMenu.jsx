@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { IoArrowForwardOutline } from 'react-icons/io5'
 
@@ -6,10 +7,10 @@ const TechnologiesMenu = () => {
     return (
         <div className='p-[24px] flex flex-col xl:flex-row justify-start xl:justify-between items-start gap-[40px] xl:gap-[24px] max-h-[calc(100vh-72px)] xl:min-h-[383px] overflow-y-scroll xl:overflow-y-hidden xl:w-[1288px]'>
           <div className='flex flex-col justify-center items-start gap-[16px]'>
-              <h2 className='flex justify-start gap-[20px] text-green text-[1.125rem] leading-[22.5px] font-semibold font-instrument items-center'>
+              <Link href={`/front-end`} className='flex justify-start gap-[20px] text-green text-[1.125rem] leading-[22.5px] font-semibold font-instrument items-center'>
                   Frontend
                   <IoArrowForwardOutline />
-              </h2>
+              </Link>
               <ul className='flex flex-col justify-center items-start gap-[8px] xl:gap-[16px] text-white'>
                   <li className='text-[.875rem] leading-[22.4px] font-normal font-instrument iLight'>Javascript</li>
                   <li className='text-[.875rem] leading-[22.4px] font-normal font-instrument iLight'>Typescript</li>

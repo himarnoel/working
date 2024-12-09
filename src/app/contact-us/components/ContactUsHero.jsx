@@ -7,7 +7,7 @@ import { TiLocation } from "react-icons/ti";
 
 const ContactUsHero = () => {
   return (
-    <section className='bg-white w-full min-h-screen py-[96px] flex flex-col justify-center items-center gap-[64px]'>
+    <section className='bg-white w-full min-h-screen pt-[200px] pb-[96px] flex flex-col justify-center items-center gap-[64px]'>
         <div className='max-w-[1280px] mx-auto px-[32px] gap-[32px]'>
             <div className='w-[328px] md:w-full gap-[16px] flex flex-col justify-center items-center text-center'>
                 <p className='text-greenTwo font-semibold text-base'>Contact us</p>

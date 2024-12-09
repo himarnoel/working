@@ -11,7 +11,7 @@ export default function PhoneInput() {
         </label>
         <div className="w-full h-[48px] gap-[6px] flex justify-center items-center py-[10px] border border-grayNine rounded-lg">
         <Select defaultValue="NGN" className="w-[87px] bg-transparent">
-            <SelectTrigger className="outline-none border-0 py-[12px] pl-[16px] pr-[12px] border-r border-r-grayNine rounded-none bg-transparent text-blue font-medium w-[87px]">
+            <SelectTrigger className="outline-none border-0 py-[12px] pl-[16px] pr-[12px]  rounded-none bg-transparent text-blue font-medium w-[87px]">
             NGN
             </SelectTrigger>
             <SelectContent>

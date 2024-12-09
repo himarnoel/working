@@ -34,13 +34,17 @@ const OurTechnologies = () => {
             >
                 {
                     technologies.map((technology, index) => (
-                        <SplideSlide key={index} className="w-[289px] min-h-[345px] p-[16px] flex flex-col justify-between items-start rounded-[12px] relative">
+                        <SplideSlide key={index} className="w-[289px] min-h-[345px] p-[16px] flex flex-col justify-between items-start rounded-[12px] relative overflow-hidden">
                             <div className='flex justify-between items-center w-full relative z-10'>
                                 <h1 className='text-gray font-medium leading-[36px] text-[1.75rem] font-manrope w-[171px]'>{technology.name}</h1>
                                 <Link href={technology.route} className='absolute top-0 right-0 flex justify-center items-center w-[21.4px] md:w-[39.77px] h-[21.4px] md:h-[39.77px] rounded-full z-10 bg-white'>
                                     <BsArrowUpRight className='text-blue text-[1rem] md:text-[1.25rem]' />
                                 </Link>
                             </div>
+                            <div
+                                style={{ backgroundColor: technology.color }}
+                                className="w-full h-full absolute top-0 left-0 rounded-[12px] z-[5px]"
+                            ></div>
                             <Image src={technology.img} alt={technology.name} className='absolute top-0 left-0 w-full h-full rounded-[12px] object-cover z-[5px]'></Image>
                             <p className='text-gray w-[241px] relative z-10 font-normal text-[1.125rem] leading-[24px] font-instrument'>{technology.desc}</p>
                         </SplideSlide>

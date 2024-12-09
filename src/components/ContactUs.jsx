@@ -11,16 +11,16 @@ const ContactUs = () => {
                 <h1 className='w-full text-blue font-semibold leading-[44px] md:leading-[60px] text-[2.25rem] md:text-[3rem]'>Get in touch</h1>
                 <p className='md:w-[641px] text-blueThree text-[.875rem] md:text-[1rem] leading-[18.2px] md:leading-[24px] font-normal font-instrument'>
                     We&apos;d love to hear from you. Please fill out this form.
-                </p>
+                </p> 
             </div>
 
             <form className='max-w-[1280px] mx-auto lg:h-[516px] gap-[64px] px-[32px] flex flex-col justify-center items-center' action="">
                 <div className='w-full lg:w-[480px] gap-[24px] flex flex-col justify-center items-center'>
                     <div className='flex flex-col lg:flex-row justify-center items-start gap-[32px] w-full'>
-                        <input className='w-full lg:w-[224px] h-[44px] gap-[6px] flex justify-center items-start px-[14px] py-[10px] border border-grayNine rounded-lg font-instrument placeholder:text-blueThree font-normal placeholder:font-normal text-base placeholder:text-base' type="text" name="" id="" placeholder='First Name' />
-                        <input className='w-full lg:w-[224px] h-[44px] gap-[6px] flex justify-center items-start px-[14px] py-[10px] border border-grayNine rounded-lg font-instrument placeholder:text-blueThree font-normal placeholder:font-normal text-base placeholder:text-base' type="text" name="" id="" placeholder='Last Name' />
+                        <input className='bg-transparent w-full lg:w-[224px] h-[44px] gap-[6px] flex justify-center items-start px-[14px] py-[10px] border border-grayNine rounded-lg font-instrument placeholder:text-blueThree font-normal placeholder:font-normal text-base placeholder:text-base' type="text" name="" id="" placeholder='First Name' />
+                        <input className='bg-transparent w-full lg:w-[224px] h-[44px] gap-[6px] flex justify-center items-start px-[14px] py-[10px] border border-grayNine rounded-lg font-instrument placeholder:text-blueThree font-normal placeholder:font-normal text-base placeholder:text-base' type="text" name="" id="" placeholder='Last Name' />
                     </div>
-                    <input className='w-full h-[44px] gap-[6px] flex justify-center items-start px-[14px] py-[10px] border border-grayNine rounded-lg font-instrument placeholder:text-blueThree font-normal placeholder:font-normal text-base placeholder:text-base' type="text" name="" id="" placeholder='olivia@untitledui.com' />
+                    <input className='bg-transparent w-full h-[44px] gap-[6px] flex justify-center items-start px-[14px] py-[10px] border border-grayNine rounded-lg font-instrument placeholder:text-blueThree font-normal placeholder:font-normal text-base placeholder:text-base' type="text" name="" id="" placeholder='olivia@untitledui.com' />
                     <PhoneInput/>
 
                     <div className="flex flex-col justify-center items-start gap-[6px] w-full">
