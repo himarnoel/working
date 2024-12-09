@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.font-dmSans {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+.font-bevan {
+    font-family: "Bevan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .fade-in {
     animation: fadeIn 0.3s forwards;
 }
