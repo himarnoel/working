@@ -1,0 +1,4 @@
+[[headers]]
+for = "/*"
+[headers.values]
+X-UA-Compatible = "IE=edge,chrome=1"

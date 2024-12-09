@@ -47,5 +47,11 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
     "ui": "github:shadcn/ui"
-  }
+  },
+  "browserslist": [
+  "last 2 versions",
+  "not dead",
+  "not < 0.2%",
+  "Edge >= 16"
+]
 }
