@@ -49,8 +49,9 @@
     "ui": "github:shadcn/ui"
   },
   "browserslist": [
-  ">0.2%",
+  "last 2 versions",
   "not dead",
-  "not op_mini all"
+  "not < 0.2%",
+  "Edge >= 16"
 ]
 }
