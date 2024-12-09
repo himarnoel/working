@@ -9,22 +9,25 @@ import {
 } from "@chakra-ui/accordion";
 import { IoAddCircleOutline } from 'react-icons/io5';
 import { FiMinusCircle } from "react-icons/fi";
+import { usePathname } from 'next/navigation';
 
-const FAQGeneral = ({ faqs }) => {
+const FAQGeneral = ({ faqs, faqTitle }) => {
   const [expandedItem, setExpandedItem] = useState(null);
 
   const toggleItem = (id) => {
     setExpandedItem(expandedItem === id ? null : id);
   };
 
+  const pathname = usePathname();
+
   return (
     <section className='bg-white w-full min-h-screen py-[120px] gap-[64px] flex flex-col justify-center items-center lg:px-[74px]'>
       <div className='w-full lg:max-w-[1280px] mx-auto flex flex-col justify-start items-center gap-[64px]'>
         <div className='flex flex-col justify-center items-center gap-[20px] text-center'>
           <h1 className='font-semibold leading-[50px] text-[2.5rem] text-blue'>
-            Frequently asked questions For<br /> Frontend Development
+            {faqTitle}
           </h1>
-          <p className='text-blueThree text-[1.125rem] leading-[30px]'>
+          <p className='hidden lg:flex text-blueThree text-[1.125rem] leading-[30px]'>
             Everything you need to know about the product and billing.
           </p>
         </div>
@@ -63,7 +66,7 @@ const FAQGeneral = ({ faqs }) => {
                     <p className='text-[.875rem] lg:text-[1.125rem] text-blueTwo leading-[19.6px] lg:leading-[28px] font-normal font-instrument'>
                       {faq.desc}
                     </p>
-                    <ul className="list-disc pl-5">
+                    <ul className={`${pathname === '/back-end' && faq.id === 5 ? '' : 'list-disc'} pl-5`}>
                       {faq.list && Array.isArray(faq.list) && faq.list.map((f, index) => (
                         <li className='text-[.875rem] lg:text-[1.125rem] text-blueTwo leading-[19.6px] lg:leading-[28px] font-normal font-instrument' key={index}>
                           {f}

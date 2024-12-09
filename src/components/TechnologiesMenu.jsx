@@ -22,10 +22,10 @@ const TechnologiesMenu = () => {
           <div className='flex justify-between items-start gap-6'>
             <div className='hidden xl:flex bg-gray w-[1px] rounded h-[360px] mt-10'></div>
             <div className='flex flex-col justify-center items-start gap-[16px]'>
-                <h2 className='flex justify-start gap-[20px] text-green text-[1.125rem] leading-[22.5px] font-semibold font-instrument items-center'>
+                <Link href={`/back-end`} className='flex justify-start gap-[20px] text-green text-[1.125rem] leading-[22.5px] font-semibold font-instrument items-center'>
                     Backend
                     <IoArrowForwardOutline />
-                </h2>
+                </Link>
                 <ul className='flex flex-col justify-center items-start gap-[8px] xl:gap-[16px] text-white'>
                     <li className='text-[.875rem] leading-[22.4px] font-normal font-instrument'>Java</li>
                     <li className='text-[.875rem] leading-[22.4px] font-normal font-instrument'>.NET</li>

@@ -39,7 +39,8 @@ module.exports = {
 			grayThirteen: '#4F4F4F',
 			grayFourteen: '#98A2B3',
 			grayFifteen: '#D7E3FA',
-			graySixteen: '#F2F2F2'
+			graySixteen: '#F2F2F2',
+			graySeventeen: '#CBD5E1'
   		},
   		fontFamily: {
   			instrument: ['Instrument Sans"', "sans-serif"],

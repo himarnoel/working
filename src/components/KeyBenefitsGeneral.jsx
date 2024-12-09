@@ -1,6 +1,6 @@
 import React from 'react'
 import team from '../../public/assets/front-end/team.svg';
-// import colar from '../../public/assets/front-end/colar.svg';
+import colar from '../../public/assets/front-end/colar.svg';
 import Image from 'next/image';
 
 const KeyBenefitsGeneral = ({benefits}) => {
@@ -21,7 +21,7 @@ const KeyBenefitsGeneral = ({benefits}) => {
                         benefits.slice(0,1).map((benefit) => (
                             <div key={benefit.id} className='flex flex-col justify-center items-start gap-[12px] lg:gap-[24px] font-instrument'>  
                                 <div className='w-[50.4px] h-[50.4px] bg-greenTwo flex md:hidden justify-center items-center rounded-[5.76px]'>
-                                    {/* <Image src={colar} alt='Colar Icon' className='object-cover w-[21.6px] h-[21.6px]'></Image> */}
+                                    <Image src={colar} alt='Colar Icon' className='object-cover w-[21.6px] h-[21.6px]'></Image>
                                 </div>
                                 <h1 className='font-instrument font-medium text-blue text-[1.5rem] lg:text-[2rem] leading-[31.2px] lg:leading-[41.6px]'>{benefit.name}</h1>
                                 <p className='font-instrument font-normal text-grayThirteen text-[.875rem] lg:text-[1rem] leading-[22.4px] lg:leading-[25.6px]'>{benefit.desc}</p>
@@ -32,10 +32,10 @@ const KeyBenefitsGeneral = ({benefits}) => {
                         benefits.slice(1,).map((b) => (
                             <div key={b.id} className='flex flex-col justify-center items-start gap-[12px] lg:gap-[24px] font-instrument'>
                                 <div className='w-[50.4px] h-[50.4px] bg-greenTwo flex md:hidden justify-center items-center rounded-[5.76px]'>
-                                    {/* <Image src={colar} alt='Colar Icon' className='object-cover w-[21.6px] h-[21.6px]'></Image> */}
+                                    <Image src={colar} alt='Colar Icon' className='object-cover w-[21.6px] h-[21.6px]'></Image>
                                 </div>
-                                <h1 className='font-instrument font-medium text-blue text-[1.5rem] lg:text-[2rem] leading-[31.2px] lg:leading-[41.6px]'>{b.name}</h1>
-                                <p className='font-instrument font-normal text-grayThirteen text-[.875rem] lg:text-[1rem] leading-[22.4px] lg:leading-[25.6px]'>{b.desc}</p>
+                                <h1 className='font-instrument font-medium text-grayTwelve text-[1.5rem] lg:text-[2rem] leading-[31.2px] lg:leading-[41.6px]'>{b.name}</h1>
+                                <p className='font-instrument font-normal text-grayTwelve text-[.875rem] lg:text-[1rem] leading-[22.4px] lg:leading-[25.6px]'>{b.desc}</p>
                             </div>
                         ))
                     }

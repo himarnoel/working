@@ -20,7 +20,7 @@ const TechnologiesHero = ({title, desc, heroImg}) => {
                 </p>
                 <Link href={`/contact-us`} className='h-[48px] rounded-lg w-[177px] border border-greenTwo text-greenTwo font-normal text-[.875rem] leading-[16.8px] flex justify-center items-center gap-[56px]'>Get in Touch</Link>
             </div>
-            <Image src={heroImg.src} alt='Technologies' width={640} height={560} className='hidden xl:flex object-cover'></Image>
+            <Image src={heroImg.src} alt='Technologies' width={640} height={560} className='hidden xl:flex object-cover rounded-[16px]'></Image>
             <Image src={heroImg.src} alt='Technologies' width={340} height={310.86} className='flex xl:hidden object-cover'></Image>
         </div>
     </section>

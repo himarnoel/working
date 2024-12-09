@@ -36,6 +36,8 @@ import comp from '../../public/assets/home/industry/companies.svg';
 import ent from '../../public/assets/home/industry/entities.svg';
 
 
+// FE Services
+
 
 import cwad from '../../public/assets/front-end/cwad.svg';
 import wwp from '../../public/assets/front-end/wwp.svg';
@@ -46,6 +48,16 @@ import uds from '../../public/assets/front-end/uds.svg';
 import api from '../../public/assets/front-end/api.svg';
 
 
+// BE Services
+
+import cad from '../../public/assets/back-end/cad.svg';
+import ma from '../../public/assets/back-end/ma.svg';
+import sld from '../../public/assets/back-end/sld.svg';
+import cbs from '../../public/assets/back-end/cbs.svg';
+import ddm from '../../public/assets/back-end/ddm.svg';
+import cms from '../../public/assets/back-end/cms.svg';
+
+// FE Tech Icons
 
 import js from '../../public/assets/front-end/prg/js.svg';
 import ts from '../../public/assets/front-end/prg/ts.svg';
@@ -56,6 +68,22 @@ import sass from '../../public/assets/front-end/prg/sass.svg';
 import less from '../../public/assets/front-end/prg/less.svg';
 import html from '../../public/assets/front-end/prg/html.svg';
 import css from '../../public/assets/front-end/prg/css.svg';
+
+
+// BE Tech Icons
+
+import java from '../../public/assets/back-end/prg/java.svg';
+import net from '../../public/assets/back-end/prg/net.svg';
+import php from '../../public/assets/back-end/prg/php.svg';
+import py from '../../public/assets/back-end/prg/py.svg';
+import dj from '../../public/assets/back-end/prg/dj.svg';
+import ru from '../../public/assets/back-end/prg/ru.svg';
+import no from '../../public/assets/back-end/prg/no.svg';
+import sc from '../../public/assets/back-end/prg/sc.svg';
+import go from '../../public/assets/back-end/prg/go.svg';
+import c from '../../public/assets/back-end/prg/c.svg';
+import cs from '../../public/assets/back-end/prg/cs.svg';
+
 
 
 export const cases = [
@@ -355,6 +383,8 @@ export const industries = [
 ]
 
 
+// WHY ELARA SOLUTIONS
+
 export const whyFrontend = [
     {
         id: 1,
@@ -373,6 +403,28 @@ export const whyFrontend = [
     },
 ]
 
+
+export const whyBackend = [
+    {
+        id: 1,
+        heading: 'Expertise in Diverse Technologies',
+        desc: 'Our team is proficient in a wide range of backend technologies, allowing us to select the best tools and frameworks tailored to your specific needs. Whether you need RESTful APIs, microservices, or database management, we have the expertise to deliver.'
+    },
+    {
+        id: 2,
+        heading: 'Scalability and Performance',
+        desc: 'We design backend systems that can scale seamlessly with your business growth. Our solutions are optimised for performance, ensuring fast response times and efficient data processing.'
+    },
+    {
+        id: 3,
+        heading: 'Security First',
+        desc: 'Security is a top priority in our backend development process. We implement robust security measures to protect your data and ensure compliance with industry standards, providing you with peace of mind.'
+    },
+]
+
+
+
+// SERVICES
 
 export const servicesFrontend = [
     {
@@ -438,6 +490,77 @@ export const servicesFrontend = [
         img: api
     },
 ]
+
+
+
+
+
+export const servicesBackend = [
+    {
+        id: 1,
+        name: 'Custom API Development',
+        desc: 'We develop custom APIs that enable seamless communication between your frontend and backend systems. Our APIs are designed for high performance and scalability, allowing your applications to integrate smoothly with third-party services and platforms.',
+        img: cad
+    },
+    {
+        id: 2,
+        name: (
+            <>
+                Microservices Architecture
+            </>
+        ),
+        desc: 'Our team specialises in building microservices-based architectures that enhance flexibility and scalability. This approach allows for independent development, deployment, and scaling of individual services, improving overall application resilience.',
+        img: ma
+    },
+    {
+        id: 3,
+        name: (
+            <>
+                Server-Side Logic Development
+            </>
+        ),
+        desc: 'We implement complex business logic on the server side to ensure that your applications function smoothly. Our backend solutions are designed to handle user authentication, data validation, and business processes efficiently.',
+        img: sld
+    },
+    {
+        id: 4,
+        name: 'Cloud-Based Solutions',
+        desc: 'Our expertise in cloud technologies enables us to build scalable backend solutions that leverage cloud services. We create cloud-native applications that enhance availability, reliability, and scalability, allowing your business to thrive in a digital landscape.',
+        img: cbs
+    },
+    {
+        id: 5,
+        name: (
+            <>
+                Database Development & <br className='hidden lg:flex'/>Management 
+            </>
+        ),
+        desc: 'We provide comprehensive database development and management services, including:',
+        list: [
+            'Database Design: Creating efficient and scalable database structures to support your application’s needs.',
+            'Performance Optimisation: Regularly monitoring and optimising database performance to ensure quick data retrieval and processing.',
+            'Data Migration: Assisting with seamless data migration to new database systems, ensuring data integrity throughout the process.'
+        ],
+        img: ddm
+    },
+    {
+        id: 6,
+        name: (
+            <>
+                Content Management <br className='hidden lg:flex'/>Systems (CMS) 
+            </>
+        ),
+        desc: "We develop custom CMS solutions that empower you to manage your website's content with ease. Our backend development ensures that your CMS is user-friendly, secure, and flexible, allowing for quick updates and content changes.",
+        img: cms
+    }
+]
+
+
+
+
+// Technologies
+
+
 
 
 export const techFrontend = [
@@ -560,6 +683,100 @@ export const techFrontend = [
 
 
 
+
+export const techBackend = [
+    {
+        id: 1,
+        img: java,
+        tech: 'Java',
+        parOne: "Java is a versatile and widely used programming language known for its portability and scalability. We leverage Java to build robust enterprise-level applications that require high performance and reliability.",
+        route: '/back-end'
+    },
+    {
+        id: 2,
+        img: net,
+        tech: '.NET',
+        parOne: "Our expertise in the .NET framework enables us to develop secure and scalable applications for various platforms, including web, desktop, and mobile. We utilise C# and other .NET languages to create efficient solutions tailored to your business..",
+        list: [],
+        // parTwo: "We leverage TypeScript’s strengths to build scalable and performant applications, offering the reliability needed for enterprise-level solutions and long-term growth.",
+        route: '/back-end'
+    },
+    {
+        id: 3,
+        img: php,
+        tech: 'PHP',
+        parOne: "PHP is a powerful scripting language commonly used for web development. Our team utilises PHP to create dynamic web applications and content management systems, ensuring a seamless user experience.",
+        list: [],
+        parTwo: "",
+        route: '/back-end'
+    },
+    {
+        id: 4,
+        img: py,
+        imgTwo: dj,
+        tech: 'Python/Django',
+        parOne: "Python's simplicity and versatility make it an ideal choice for backend development. We use Python to build scalable applications, data processing scripts, and automation tools, leveraging frameworks like Django and Flask for rapid development.Django is a high-level Python web framework that encourages rapid development and clean design. We use Django to build secure and scalable web applications, focusing on reusable components and a robust admin interface",
+        list: [],
+        parTwo: "",
+        route: '/back-end'
+    },
+    {
+        id: 5,
+        img: ru,
+        tech: 'Ruby',
+        parOne: "Ruby, known for its elegant syntax and developer-friendly environment, allows us to create high-quality web applications quickly. We utilise the Ruby on Rails framework to deliver feature-rich solutions with a focus on convention over configuration.",
+        list: [],
+        parTwo: "",
+        route: '/back-end'
+    },
+    {
+        id: 6,
+        img: no,
+        tech: 'Node.js',
+        parOne: "Node.js enables us to build fast and scalable network applications using JavaScript on the server side. Our expertise in Node.js allows us to develop real-time applications and RESTful APIs that handle numerous simultaneous connections.",
+        list: [],
+        parTwo: "",
+        route: '/back-end'
+    },
+    {
+        id: 7,
+        img: sc,
+        tech: 'Scala',
+        parOne: "Scala combines object-oriented and functional programming, making it a powerful choice for complex applications. We leverage Scala to build scalable and maintainable backend systems that meet the demands of modern applications.",
+        list: [],
+        parTwo: "",
+        route: '/back-end'
+    },
+    {
+        id: 8,
+        img: go,
+        tech: 'Golang',
+        parOne: "Golang (Go) is known for its simplicity and efficiency, making it an excellent choice for cloud-based applications and microservices. Our team utilises Go to develop high-performance backend services that can handle high traffic with ease.",
+        list: [],
+        parTwo: "",
+        route: '/back-end'
+    },
+    {
+        id: 9,
+        img: c,
+        imgTwo: cs,
+        tech: 'C/C#',
+        parOne: "For performance-critical applications, we utilise C and C++ to develop high-performance backend systems. These languages allow us to create applications that require low-level system access and optimisation.",
+        list: [
+               
+        ],
+        parTwo: "",
+        route: '/back-end'
+    },
+];
+
+
+
+// FE Benefits
+
+
+
+
 export const benefitsFE = [
     {
         id: 1,
@@ -586,6 +803,47 @@ export const benefitsFE = [
         icons: '',
     },
 ]
+
+
+
+
+// Benefits BE
+
+
+
+
+export const benefitsBE = [
+    {
+        id: 1,
+        name: 'Enhanced Application Performance',
+        desc: 'Our backend solutions are optimised for speed and efficiency, ensuring that your applications deliver a superior user experience.',
+        icons: '',
+    },
+    {
+        id: 2,
+        name: 'Seamless Integration',
+        desc: 'We ensure that your backend systems integrate smoothly with existing applications, services, and databases, providing a cohesive operational environment.',
+        icons: '',
+    },
+    {
+        id: 3,
+        name: 'Ongoing Support and Maintenance',
+        desc: 'We offer continuous support and maintenance services to keep your backend systems running smoothly and securely, addressing any issues promptly.',
+        icons: '',
+    },
+    {
+        id: 4,
+        name: 'Agile Development Methodology',
+        desc: 'Our agile approach allows us to respond quickly to changing requirements and deliver high-quality solutions on time.',
+        icons: '',
+    },
+]
+
+
+
+// FAQS FE
+
+
 
 
 export const Faqs = [
@@ -695,5 +953,148 @@ export const Faqs = [
         id: 9,
         name: 'How do I change my account email?',
         desc: '...',
+    },
+]
+
+
+// FAQS BE
+
+
+
+export const FaqsBE = [
+    {
+        id: 1,
+        name: 'What is backend development?',
+        desc: 'Backend development refers to the server-side development of applications. It involves creating the components and logic that handle data storage, processing, and communication between the server and the client. This includes database management, server configuration, and API development.'
+    },
+    {
+        id: 2,
+        name: 'Why is backend development important?',
+        desc: 'Backend development is crucial because it ensures that the application operates smoothly and efficiently. It manages the server, database, and application logic, enabling users to interact with the system seamlessly. A well-designed backend is essential for application performance, security, and scalability.'
+    },
+    {
+        id: 3,
+        name: 'What are APIs, and why are they important in backend development?',
+        desc: 'APIs (Application Programming Interfaces) are sets of rules and protocols that allow different software applications to communicate with each other. In backend development, APIs are essential for enabling the front end to interact with the backend services, facilitating data exchange and functionality access.',
+        list: [],
+        descTwo: 'These technologies are often used in combination with various frameworks and libraries for enhanced functionality and efficiency.'
+    },
+    {
+        id: 4,
+        name: 'How do you ensure the security of backend systems?',
+        desc: 'We implement multiple security measures to protect backend systems, including:',
+        list: [
+            'Data encryption (in transit and at rest)',
+            'User authentication and authorisation',
+            'Regular security audits and vulnerability assessments',
+            'Input validation and sanitisation to prevent attacks like SQL injection',
+            'Secure coding practices to mitigate risks'
+        ],
+    },
+    {
+        id: 5,
+        name: 'What is the typical backend development process?',
+        desc: 'The backend development process generally includes the following steps:',
+        list: [
+            '1. Requirements analysis',
+            '2. Backend architecture design',
+            '3. Prototyping',
+            '4. Architecture design',
+            '5. Development',
+            '6. Testing',
+            '7. Deployment',
+            '8. Ongoing support',
+        ],
+        descTwo: 'Each of these stages is essential for ensuring a well-functioning backend system.'
+    },
+    {
+        id: 6,
+        name: 'How do you handle database management in backend development?',
+        desc: 'We handle database management by:',
+        list: [
+            'Designing efficient database schemas',
+            'Implementing data normalisation and indexing for performance',
+            'Conducting regular backups and monitoring',
+            'Optimising queries to ensure fast data retrieval',
+            'Performing migrations and updates as needed'
+        ],
+    },
+    {
+        id: 7,
+        name: 'How do you ensure the performance and scalability of backend systems?',
+        desc: 'We ensure performance and scalability by:',
+        list: [
+            'Implementing efficient database indexing and query optimisation',
+            'Using caching strategies to reduce server load',
+            'Employing load balancing to distribute traffic evenly across servers',
+            'Adopting cloud-based solutions that allow for scalable infrastructure',
+            'Regularly monitoring system performance and making necessary adjustments'
+        ],
+    },
+    {
+        id: 8,
+        name: 'What kind of support and maintenance do you offer after deployment?',
+        desc: 'After deployment, we provide ongoing support and maintenance that includes:',
+        list: [
+            'Monitoring system performance and security',
+            'Addressing any bugs or issues that arise',
+            'Adding new features or functionalities based on user feedback',
+            'Regularly updating software and dependencies to ensure compatibility and security'
+        ],
+    },
+]
+
+
+
+// Process BE
+
+export const processBE = [
+    {
+        id: 1,
+        n: '01',
+        name: 'Requirements Analysis',
+        desc: 'The initial step focuses on planning, understanding business needs, and creating a detailed roadmap. We assess the necessary number of developers to ensure successful project completion without delays.'
+    },
+    {
+        id: 2,
+        n: '02',
+        name: 'Backend Architecture',
+        desc: 'In this stage, we design the backend architecture for the future solution. This includes outlining the backend logic and structure, gathering non-functional requirements, preparing documentation, conducting risk analysis, and implementing strategies to mitigate potential component failures.'
+    },
+    {
+        id: 3,
+        n: '03',
+        name: 'Prototyping',
+        desc: 'Here, we develop a prototype that highlights the core features, allowing stakeholders to evaluate the functionality and potential effectiveness of the solution.'
+    },
+    {
+        id: 4,
+        n: '04',
+        name: 'Architecture Design',
+        desc: 'Before coding begins, our team designs the backend architecture to meet the latest technical standards and requirements.'
+    },
+    {
+        id: 5,
+        n: '05',
+        name: 'Development',
+        desc: 'In this phase, we utilise the most suitable programming languages, libraries, and frameworks to build the backend, ensuring it aligns with the project objectives.'
+    },
+    {
+        id: 6,
+        n: '06',
+        name: 'Testing',
+        desc: 'Backend testing primarily involves examining the application and database layers. Our quality assurance specialists conduct various tests—including unit testing, integration testing, end-to-end testing, load/stress testing, and automated testing—to identify and resolve bugs and vulnerabilities.'
+    },
+    {
+        id: 7,
+        n: '07',
+        name: 'Deployment',
+        desc: "The next step is deploying the system to servers, whether in the cloud or on the client's physical machines. We also establish monitoring and health checks to ensure system stability."
+    },
+    {
+        id: 8,
+        n: '08',
+        name: 'Ongoing Support',
+        desc: "After deployment, our developers continue to enhance the system by adding new functionalities and improving existing features. Additionally, we configure the cloud platform and CI/CD pipelines, ensuring the full delivery of your solution into the cloud."
     },
 ]

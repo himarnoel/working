@@ -33,6 +33,11 @@ const page = () => {
     const [techTitle, setTechTitle] = useState('Our Frontend Technologies');
     const [benefits, setBenefits] = useState(benefitsFE);
     const [faqs, setFaqs] = useState(Faqs);
+    const [faqTitle, setFaqTitle] = useState((
+      <>
+        Frequently asked questions For<br /> Frontend Development
+      </>
+    ))
   return (
     <main>
         <TechnologiesHero title={title} desc={desc} heroImg={heroImg} />
@@ -46,7 +51,7 @@ const page = () => {
         </section>
         <OurTechnologiesGeneral tech={tech} techTitle={techTitle} />
         <KeyBenefitsGeneral benefits={benefits} />
-        <FAQGeneral faqs={faqs}/>
+        <FAQGeneral faqs={faqs} faqTitle={faqTitle}/>
         <PartnerWithElara/>
         <MoreTechnologies/>
     </main>
