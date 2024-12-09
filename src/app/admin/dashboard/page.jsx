@@ -3,13 +3,13 @@ import { useFetchJobsQuery } from "@/services/jobApi";
 import React from "react";
 
 const Dashboard = () => {
-  const {
-    data: jobs,
-    error: fetchError,
-    isLoading: isFetching,
-  } = useFetchJobsQuery();
-  console.log(jobs);
-
+  // const {
+  //   data: jobs,
+  //   error: fetchError,
+  //   isLoading: isFetching,
+  // } = useFetchJobsQuery();
+  // console.log(jobs);
+const jobs=[]
   return (
     <div className="px-4">
       {" "}
