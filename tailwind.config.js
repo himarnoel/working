@@ -11,6 +11,7 @@ module.exports = {
   		colors: {
   			white: '#ffffff',
   			black: '#000000',
+			blackTwo: '#242527',
   			blue: '#161141',
   			blueTwo: '#475569',
   			blueThree: '#667085',
@@ -20,6 +21,8 @@ module.exports = {
         	blueSeven: '#344054',
         	blueEight: '#706F70',
 			blueNine: '#3C75FF',
+			blueTen: '#575F6A',
+			blueEleven: '#232038',
   			green: '#88E755',
   			greenTwo: '#39A300',
         	greenThree: '#62D60E',
@@ -40,7 +43,15 @@ module.exports = {
 			grayFourteen: '#98A2B3',
 			grayFifteen: '#D7E3FA',
 			graySixteen: '#F2F2F2',
-			graySeventeen: '#CBD5E1'
+			graySeventeen: '#CBD5E1',
+			grayEighteen: '#E8E8E6',
+			grayNinteen: '#B4B2C2',
+			grayTwenty: '#333333',
+			grayTwentyOne: '#F1F5F9',
+			grayTwentyTwo: '#E2E8F0',
+			grayTwentyThree: '#F9F9F9',
+			red: '#D1797A',
+			yellow: '#febd58'
   		},
   		fontFamily: {
   			instrument: ['Instrument Sans"', "sans-serif"],

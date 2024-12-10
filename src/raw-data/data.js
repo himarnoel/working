@@ -86,6 +86,14 @@ import cs from '../../public/assets/back-end/prg/cs.svg';
 
 
 
+
+
+
+import chart from '../../public/assets/career/chart.svg';
+import copy from '../../public/assets/career/copy.svg';
+import bulb from '../../public/assets/career/bulb.svg';
+import job from '../../public/assets/career/job.svg';
+
 export const cases = [
     {
         id: 1,
@@ -1097,4 +1105,35 @@ export const processBE = [
         name: 'Ongoing Support',
         desc: "After deployment, our developers continue to enhance the system by adding new functionalities and improving existing features. Additionally, we configure the cloud platform and CI/CD pipelines, ensuring the full delivery of your solution into the cloud."
     },
+]
+
+
+
+
+
+export const ourBenefits = [
+    {
+        id: 1,
+        img: chart,
+        name: 'Competitive Compensation',
+        desc: 'We provide a competitive salary package that recognizes the skills and expertise of our employees. Elara solutions believes in rewarding exceptional performance and offering opportunities for financial growth.'
+    },
+    {
+        id: 2,
+        img: bulb,
+        name: 'Health and Wellness',
+        desc: 'We prioritize the health and well-being of our employees by providing comprehensive medical, dental, and vision insurance plans. We also offer wellness programs, gym memberships, and resources to support a healthy lifestyle.'
+    },
+    {
+        id: 3,
+        img: job,
+        name: 'Retirement Planning',
+        desc: 'Elara solutions is committed to helping employees plan for their future. We offer a retirement savings plan with a generous employer match to help them build a secure financial foundation for the long term.'
+    },
+    {
+        id: 4,
+        img: copy,
+        name: 'Work-Life Balance',
+        desc: 'We understand the importance of maintaining a healthy work-life balance. Elara solutions offers flexible work arrangements, paid time off, parental leave, and other programs that support employees in managing their personal and professional commitments.'
+    }
 ]
