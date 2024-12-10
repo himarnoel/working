@@ -50,6 +50,7 @@ module.exports = {
 			grayTwentyOne: '#F1F5F9',
 			grayTwentyTwo: '#E2E8F0',
 			grayTwentyThree: '#F9F9F9',
+			grayTwentyFour: '#E1DADA66',
 			red: '#D1797A',
 			yellow: '#febd58'
   		},
