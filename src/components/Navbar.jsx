@@ -144,8 +144,8 @@ const Navbar = () => {
       {["Technologies", "Services", "Products"].includes(selectedLink) && (
         <DropMenu
           links={true}
-          ref={dropMenuRef}
-          selectedLink={selectedLink}
+           ref={dropMenuRef}
+          setLinks={() => {}}
           currentLink={selectedLink}
           setCurrentLink={() => {}}
         />
