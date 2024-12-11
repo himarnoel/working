@@ -37,8 +37,9 @@ const FAQGeneral = ({ faqs, faqTitle }) => {
             {faqs.map((faq) => (
               <AccordionItem
                 key={faq.id}
-                className="py-[32px] px-[16px] lg:p-[32px] border border-graySix bg-gray rounded-lg w-full min-h-[120px] lg:min-h-[96px]"
                 isExpanded={expandedItem === faq.id}
+                className="py-[32px] px-[16px] lg:p-[32px] border border-graySix bg-gray rounded-lg w-full min-h-[120px] lg:min-h-[96px]"
+               
               >
                 <div className='flex flex-col justify-center items-start gap-[24px]'>
                   <AccordionButton
