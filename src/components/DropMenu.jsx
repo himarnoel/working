@@ -10,7 +10,7 @@ const DropMenu = ({ links, selectedLink, currentLink, setCurrentLink, ref }) => 
   console.log("Links", links);
   return (
     <nav
-      ref={ref}
+    ref={ref}
       className={`${
         links ? "fadein" : "fadeout"
       } bg-blue w-full absolute left-0 right-0 top-[100%] h-[560px] hidden xl:flex p-[50px] justify-center items-start`}

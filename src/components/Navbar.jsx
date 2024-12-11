@@ -24,11 +24,7 @@ const Navbar = () => {
   // Close drop menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        dropMenuRef.current &&
-        !dropMenuRef.current.contains(event.target) &&
-        selectedLink
-      ) {
+      if (dropMenuRef.current && !dropMenuRef.current.contains(event.target)) {
         setSelectedLink(""); // Close the drop menu
       }
     };
@@ -37,7 +33,7 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [selectedLink]);
+  }, []);
   return (
     <nav
       className={
@@ -70,32 +66,35 @@ const Navbar = () => {
 
       <div className="hidden xl:flex justify-between relative items-center gap-[32px] min-w-[590px]">
         {links.map((link, index) => (
-          <Link
-            href={link.route}
-            onClick={() => {
-              setSelectedLink((prevLink) =>
-                prevLink === link.name ? "" : link.name
-              );
-            }}
-            key={index}
-            className={
-              pathname === "/"
-                ? `group flex font-medium justify-center items-center gap-[2px] duration-200 text-gray cursor-pointer hover:text-greenTwo  leading-[16px] font-instrument`
-                : `group flex font-medium justify-center items-center gap-[2px] duration-200 text-blueTwo cursor-pointer hover:text-greenTwo  leading-[16px] font-instrument`
-            }
-          >
-            <div className="group flex flex-col justify-center items-center relative">
-              <p className="text-[1rem] font-instrument">{link.name} </p>
-              <span className="absolute bottom-[-18px] h-[3px] rounded-lg bg-greenTwo w-[120px] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 left-1/2 -translate-x-1/2"></span>
-            </div>
-            {["Products", "Technologies", "Services"].includes(link.name) && (
-              <MdOutlineKeyboardArrowDown
-                className={`${
-                  selectedLink === link.name ? "rotate-[180deg]" : "rotate-0"
-                } duration-200`}
-              />
-            )}
-          </Link>
+          <div key={index} ref={dropMenuRef} className="">
+            <Link
+              ref={dropMenuRef}
+              href={link.route}
+              onClick={() => {
+                setSelectedLink((prevLink) =>
+                  prevLink === link.name ? "" : link.name
+                );
+              }}
+              key={index}
+              className={
+                pathname === "/"
+                  ? `group flex font-medium justify-center items-center gap-[2px] duration-200 text-gray cursor-pointer hover:text-greenTwo  leading-[16px] font-instrument`
+                  : `group flex font-medium justify-center items-center gap-[2px] duration-200 text-blueTwo cursor-pointer hover:text-greenTwo  leading-[16px] font-instrument`
+              }
+            >
+              <div className="group flex flex-col justify-center items-center relative">
+                <p className="text-[1rem] font-instrument">{link.name} </p>
+                <span className="absolute bottom-[-18px] h-[3px] rounded-lg bg-greenTwo w-[120px] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 left-1/2 -translate-x-1/2"></span>
+              </div>
+              {["Products", "Technologies", "Services"].includes(link.name) && (
+                <MdOutlineKeyboardArrowDown
+                  className={`${
+                    selectedLink === link.name ? "rotate-[180deg]" : "rotate-0"
+                  } duration-200`}
+                />
+              )}
+            </Link>
+          </div>
         ))}
       </div>
       <Link
@@ -144,7 +143,7 @@ const Navbar = () => {
       {["Technologies", "Services", "Products"].includes(selectedLink) && (
         <DropMenu
           links={true}
-           ref={dropMenuRef}
+          ref={dropMenuRef}
           setLinks={() => {}}
           currentLink={selectedLink}
           setCurrentLink={() => {}}
