@@ -8,17 +8,36 @@ import { links } from "@/raw-data/data";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [selectedLink, setSelectedLink] = useState("");
 
+  const dropMenuRef = useRef(null);
+
   const pathname = usePathname();
 
   console.log("Nav", pathname);
 
+  // Close drop menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropMenuRef.current &&
+        !dropMenuRef.current.contains(event.target) &&
+        selectedLink
+      ) {
+        setSelectedLink(""); // Close the drop menu
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [selectedLink]);
   return (
     <nav
       className={
@@ -125,7 +144,8 @@ const Navbar = () => {
       {["Technologies", "Services", "Products"].includes(selectedLink) && (
         <DropMenu
           links={true}
-          setLinks={() => {}}
+          ref={dropMenuRef}
+          selectedLink={selectedLink}
           currentLink={selectedLink}
           setCurrentLink={() => {}}
         />

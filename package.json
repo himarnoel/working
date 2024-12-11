@@ -29,6 +29,7 @@
     "mysql2": "^3.11.3",
     "next": "^15.0.3",
     "next-joi": "^2.2.1",
+    "nextjs-toploader": "^3.7.15",
     "nodemailer": "^6.9.16",
     "nodemailer-brevo-transport": "^2.1.0",
     "quill": "^2.0.2",

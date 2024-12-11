@@ -15,6 +15,7 @@ import Testimonials from './home/Testimonials';
 import GetStarted from './home/GetStarted';
 import ContactUs from '@/components/ContactUs';
 
+
 const HomePage = () => {
   // const [jobs, setJobs] = useState([]);
   // const [title, setTitle] = useState('');
